@@ -5,7 +5,6 @@
       <div class="card-body p-4">
         <h1 class="fs-4 text-center fw-bold mb-4">Login</h1>
         <h1 class="fs-6 mb-3">Please enter your email and password to log in.</h1>
-        <x-auth-session-status class="mb-4" :status="session('status')" />
         <form method="POST" action="{{ route('login') }}" class="needs-validation">
           @csrf
           <div class="mb-3">
@@ -49,7 +48,7 @@
       </div>
     </div>
     <div class="text-center mt-5 text-muted">
-      Copyright &copy; 2022 &mdash; Mulai Dari Null
+      Copyright &copy; 2024
     </div>
   </div>
   <script>

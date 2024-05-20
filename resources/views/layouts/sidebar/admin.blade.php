@@ -1,40 +1,43 @@
 <div class="sidebar-content">
   <ul>
-    <li class="{{ request()->routeIs('dashboard.admin') ? 'active' : '' }}">
-      <a href="{{ route('dashboard.admin') }}" class="link">
+    <li class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">
+      <a href="{{ route('dashboard') }}" class="link">
         <i class="ti-home"></i>
         <span>Dashboard</span>
       </a>
     </li>
 
     <li class="menu-category">
-      <span class="text-uppercase">Management User</span>
+      <span class="text-uppercase">Management</span>
     </li>
-    <li class="{{ request()->routeIs(['admin.guru*', 'siswa*']) ? 'active' : '' }}">
+    <li class="{{ request()->routeIs(['admin*', 'pelanggan*', 'terapis*']) ? 'active' : '' }}">
       <a href="#" class="main-menu has-dropdown">
         <i class="fa-solid fa-users"></i>
         <span>User</span>
       </a>
       <ul class="sub-menu">
         <li>
-          <a href="{{ route('admin.guru.index') }}" class="link"><span>Admin</span></a>
+          <a href="{{ route('pelanggan.index') }}" class="link"><span>Pelanggan</span></a>
         </li>
         <li>
-          <a href="element-tabs-collapse.html" class="link"><span>User</span></a>
+          <a href="{{ route('terapis.index') }}" class="link"><span>Terapis</span></a>
+        </li>
+        <li>
+          <a href="{{ route('pesanan.index') }}" class="link"><span>Pesanan</span></a>
         </li>
       </ul>
     </li>
-    <li class="{{ request()->routeIs(['admin.kelas*', 'admin.course*']) ? 'active' : '' }}">
+    <li class="{{ request()->routeIs(['alternatif*', 'kriteria*']) ? 'active' : '' }}">
       <a href="#" class="main-menu has-dropdown">
-        <i class="fa-solid fa-school"></i>
-        <span>Management Data</span>
+        <i class="fa-solid fa-database"></i>
+        <span>Manage Data</span>
       </a>
       <ul class="sub-menu">
         <li>
-          <a href="{{ route('admin.kelas.index') }}" class="link"> <span>Alternatif</span></a>
+          <a href="{{ route('alternatif.index') }}" class="link"> <span>Alternatif</span></a>
         </li>
         <li>
-          <a href="{{ route('admin.course.index') }}" class="link"> <span>Kriteria</span></a>
+          <a href="{{ route('kriteria.index') }}" class="link"> <span>Kriteria</span></a>
         </li>
       </ul>
     </li>

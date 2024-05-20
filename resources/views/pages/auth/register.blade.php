@@ -50,53 +50,6 @@
             </div>
           </div>
 
-          <div class="mb-3">
-            <label class="mb-2 text-muted" for="role">Role</label>
-            <div class="input-group input-group-join mb-3">
-              <select name="role" id="role" class="form-select" required>
-                <option value="">Select Role</option>
-                <option value="admin">Admin Sekolah</option>
-                <option value="guru">Guru</option>
-                <option value="siswa">Siswa</option>
-              </select>
-              <span class="input-group-text rounded-end">&nbsp<i class="fa fa-user"></i>&nbsp</span>
-            </div>
-          </div>
-
-          <div id="sekolah_input" class="mb-3">
-            <label class="mb-2 text-muted" for="sekolah_id">Asal Sekolah</label>
-            <div class="input-group input-group-join mb-3">
-              <select name="sekolah_id" id="sekolah_id" class="form-select">
-                <option value="">Pilih Asal Sekolah</option>
-                @foreach ($dataSekolah as $sekolah)
-                  <option value="{{ $sekolah->id }}">{{ $sekolah->nama }}</option>
-                @endforeach
-              </select>
-              <span class="input-group-text rounded-end">&nbsp<i class="fa fa-school"></i>&nbsp</span>
-            </div>
-          </div>
-
-          <div id="kelas_input" class="mb-3 d-none">
-            <label class="mb-2 text-muted" for="kelas_id">Kelas</label>
-            <div class="input-group input-group-join mb-3">
-              <select name="kelas_id" id="kelas_id" class="form-select">
-                <option value="">Pilih Kelas</option>
-              </select>
-              <span class="input-group-text rounded-end">&nbsp<i class="fa fa-school"></i>&nbsp</span>
-            </div>
-          </div>
-
-          <div id="admin_form" class="d-flex flex-column gap-3 mb-3 d-none">
-            <div>
-              <label class="mb-2 text-muted" for="sekolah">Asal Sekolah</label>
-              <div class="input-group input-group-join">
-                <input type="text" placeholder="Masukkan Nama Sekolah" id="sekolah" class="form-control"
-                  name="sekolah" autofocus>
-                <span class="input-group-text rounded-end">&nbsp<i class="fa fa-school"></i>&nbsp</span>
-              </div>
-            </div>
-          </div>
-
           <div class="d-flex align-items-center">
             <button type="submit" class="btn btn-primary ms-auto">
               Register
@@ -111,7 +64,7 @@
       </div>
     </div>
     <div class="text-center mt-5 text-muted">
-      Copyright &copy; 2022 &mdash; Mulai Dari Null
+      Copyright &copy; 2024
     </div>
   </div>
   <script>
